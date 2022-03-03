@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root "announcements#index"
+  get "auth/:provider/callback", to: "sessions#googleAuth"
+  get "auth/failure", to: redirect("/")
   resources :announcements
   resources :leaderboards
   resources :users
