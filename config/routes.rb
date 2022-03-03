@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :announcements
   resources :leaderboards
   resources :users
   resources :activities
