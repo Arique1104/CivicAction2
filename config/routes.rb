@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "announcements#index"
   resources :announcements
   resources :leaderboards
   resources :users
