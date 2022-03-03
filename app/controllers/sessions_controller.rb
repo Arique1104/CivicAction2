@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 def googleAuth
+  # require "pry"; binding.pry
     # Get access tokens from the google server
     access_token = request.env["omniauth.auth"]
     user = User.from_omniauth(access_token)
